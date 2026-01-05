@@ -2,7 +2,7 @@
  *collect user number of boxs to create.
  *create new element div and add it to webpage.
  
- *write founction to generate random eight numbers for hex values
+ *write function to generate random eight numbers for hex values
 * write a function to change background colour of boxes if it is hovered on.
 
 *write function to add colors when it is hovered on.
