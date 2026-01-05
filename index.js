@@ -7,6 +7,7 @@ const numGrid = Number(prompt("choose a number from 1-100 to create a new grid!"
     let squared = numGrid * numGrid;
      for (i = 0; i < squared; i++){
          grid = document.createElement("div");
+         grid.className= "box"
          grid.setAttribute("style", "height: 100%;", "width: 100%;", "color: white;" )
      }
 
