@@ -8,4 +8,14 @@ const numGrid = Number(prompt("choose a number from 1-100 to create a new grid!"
      for (i = 0; i < squared; i++){
          let grid = document.createElement("div")
      }
+
+     try{
+       if(numGrid.isNAN){
+        throw("please write a digit number?")
+       }
+     }catch(error){
+       alert(error);
+       console.log("Error:" + error)
+       createGrid()
+     }
 }
