@@ -18,7 +18,7 @@ const numGrid = Number(prompt("choose a number from 1-100 to create a new grid!"
      }catch(error){
        alert(error);
        console.log("Error:" + error)
-       createGrid()
+      
      }
 }
 
