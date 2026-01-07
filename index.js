@@ -25,11 +25,18 @@ const numGrid = Number(prompt("choose a number from 1-100 to create a new grid!"
 
 function generateRandomHex(){
     let num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9,a,b,c,d,e,f];
-    let alhpa = [a,b,c,d,e,f]
-
-    let randomHex = function(){
-        for(i = 0; i < 6; i++){
-        let randomNum = Math.random(num)
+   
+    let randomSix = function(){
+      let randomNum 
+      let numberValue   
+         for(i = 1; i <= 6; i++){
+          randomNum = Math.floor(Math.random() * num.length);
+          numberValue = num[randomNum];
+         return numberValue;
         }
+        }
+    let randomColor = "#" + randomSix();
+    console.log(randomColor)
+    return randomColor;        
     }
-}
+console.log(generateRandomHex())
