@@ -2,7 +2,7 @@ const div = document.querySelector(".container");
 
 // function to create grid
 function createGrid(){
-let grid
+let grid;
 const numGrid = Number(prompt("choose a number from 1-100 to create a new grid!"));
     let squared = numGrid * numGrid;
      for (i = 0; i < squared; i++){
@@ -26,15 +26,23 @@ const numGrid = Number(prompt("choose a number from 1-100 to create a new grid!"
 function generateRandomHex(){
     let num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
    
-    let randomSix = function(){
+    let randomNum = function(){
       let randomNum 
       let numberValue   
-         for(i = 1; i <= 6; i++){
+        
           randomNum = Math.floor(Math.random() * num.length);
           numberValue = num[randomNum];
+          console.log(numberValue);
          return numberValue;
+       
         }
-        }
+        let randomSix = function(){
+          let sixDigits = "";
+          for(i = 0; i < 6; i++){
+            sixDigits += randomNum()
+         }
+         return sixDigits;
+       }
     let randomColor = "#" + randomSix();
     console.log(randomColor)
     return randomColor;        
