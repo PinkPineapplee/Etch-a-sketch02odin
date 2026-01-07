@@ -1,4 +1,4 @@
-const div = document.querySelector(".container");
+const container = document.querySelector(".container");
 
 // function to create grid
 function createGrid(){
@@ -8,7 +8,8 @@ const numGrid = Number(prompt("choose a number from 1-100 to create a new grid!"
      for (i = 0; i < squared; i++){
          grid = document.createElement("div");
          grid.className= "box"
-         grid.setAttribute("style", "height: 100%;", "width: 100%;", "color: white;" )
+         grid.setAttribute("style", "height: 100%;", "width: 100%;", "color: white;" );
+         container.appendChild(grid)
      }
 
      try{
