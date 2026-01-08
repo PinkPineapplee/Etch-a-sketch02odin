@@ -28,7 +28,7 @@ h1{
     background-color: white;
 }
 
-#black , #color , #reset {
+#black , #color , #reset, #eraser {
     height: 3rem;
     width: 6rem;
     border-radius: 5px;
@@ -44,10 +44,11 @@ h1{
 }
 
 footer{
-font-size: 2em;
+   font-size: 1em;
     font-family:'Courier New', Courier, monospace;
     color: rgb(154, 187, 255);
     font-weight: 500;
     text-align: center;
+    
 }
 

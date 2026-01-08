@@ -64,18 +64,18 @@ btns.forEach((button) => {
   // and for each one we add a 'click' listener
   button.addEventListener("click", () => {
     console.log(button.id);
-
-     if (button.id === "black"){
-      grid.addEventListener("mouseover",(e)=>{ e.target.style.backgroundColor = "black";})
-     } else if (button.id === "color"){
-      grid.addEventListener("mouseover",(e)=>{ e.target.style.backgroundColor = generateRandomHex();})
-     }
-     else if (button.id === "eraser"){
-      grid.addEventListener("mouseover",(e)=>{ e.target.style.backgroundColor = "white";})
+     grid.addEventListener("mouseover",()=>{ handleColorChange(e)})
      
-     } else if (button.id === "reset"){
-      
-      grid.style.backgroundColor = "white";
+     function handleColorChange(event){
+        if(button.id === "black"){
+         event.target.style.backgroundColor = "black";
+        }else if (button.id === "color"){
+          event.target.style.backgroundColor = generateRandomHex();
+        }else if(button.id === "eraser"){
+          event.target.style.backgroundColor = "white";
+        }else if (button.id === "reset"){
+          grid.style.backgroundColor = "white";
+        }
      }
   });
 });
