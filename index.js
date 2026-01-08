@@ -1,18 +1,21 @@
 const container = document.querySelector(".container");
-
-// function to create grid
-function createGrid(){
 let grid;
+
+
+
+
      
 const numGrid = Number(prompt("choose a number from 1-100 to create a new grid!"));
-console
-    let squared = numGrid ** 2;
+
+let squared = numGrid ** 2;
+    
      for (i = 0; i < squared; i++){
          grid = document.createElement("div");
-         grid.classList("box");
+         grid.className="box";
+         grid.id = `div${1};` 
          container.appendChild(grid);
         
-         console.log("hay!, I am alive!");
+         console.log("hay!, I am alive! " + i);
      }
 
      try{
@@ -24,9 +27,9 @@ console
        console.log("Error:" + error)
       
      }
-}createGrid()
 
 
+// function to create random hex number
 function generateRandomHex(){
     let num = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "a", "b", "c", "d", "e", "f"];
    

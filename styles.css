@@ -1,16 +1,16 @@
-/* body{
+body{
    background-color: rgb(20, 20, 114);
-   display: flex;
+   
 }
 .container{
-    height: 75hv;
-    width: 75hw;
-     background-color: rgb(32, 32, 125); 
-    justify-content: center;
-    align-items: center;
+    display: flex;
+    height: 25rem;
+    width: 25rem;
+    background-color: rgb(32, 32, 125); 
+    border: 1ch rgb(245, 97, 122) solid;
 }
 .box{
-    height: 4px; 
-    width: 4px;
-    color: white;
-} */
+    height: 100%; 
+    width: 100%;
+    background-color: white;
+}
