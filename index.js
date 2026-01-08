@@ -1,4 +1,5 @@
 const container = document.querySelector(".container");
+const btns = document.querySelectorAll("button");
 let grid;
 
 
@@ -15,7 +16,7 @@ let squared = numGrid ** 2;
          grid.id = `div${1};` 
          container.appendChild(grid);
         
-         console.log("hay!, I am alive! " + i);
+        
      }
 
      try{
@@ -56,14 +57,23 @@ function generateRandomHex(){
     }
 console.log(generateRandomHex())
 
+
 function draw(){
 
-}
+btns.forEach((button) => {
+  // and for each one we add a 'click' listener
+  button.addEventListener("click", () => {
+    console.log(button.id);
 
-function toChangeColor(){
+     if (button.id === "black"){
+      grid.addEventListener("mouseover",(e)=>{ e.target.id.style.background = "black";})
+     } else if (button.id === "color"){
+      grid.addEventListener("mouseover",(e)=>{ e.target.id.style.background = generateRandomHex();})
+     }
+     else if (button.id === "reset"){
+      grid.style.background = "white";
+     }
+  });
+});
+}draw()
 
-}
-
-function reset(){
-  
-}
