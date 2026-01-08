@@ -72,9 +72,9 @@ btns.forEach((button) => {
      }
      else if (button.id === "eraser"){
       container.addEventListener("mouseover",(e)=>{ e.target.style.background = "white";})
-      grid.style.background = "white";
+     
      } else if (button.id === "reset"){
-      container.addEventListener("mouseover",(e)=>{ e.target.style.background = "white";})
+      
       grid.style.background = "white";
      }
   });
