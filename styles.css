@@ -1,16 +1,53 @@
 body{
    background-color: rgb(20, 20, 114);
    
+   
 }
+
+h1{
+    font-size: 2em;
+    font-family:'Courier New', Courier, monospace;
+    color: rgb(154, 187, 255);
+    font-weight: 500;
+    text-align: center;
+}
+
 .container{
     display: flex;
-    height: 25rem;
-    width: 25rem;
+    height: 70vh;
+    width: 70vw;
     background-color: rgb(32, 32, 125); 
-    border: 1ch rgb(245, 97, 122) solid;
+    border: 1ch rgb(154, 187, 255) solid;
+    margin-left: 15%;
+    
+   
 }
 .box{
     height: 100%; 
     width: 100%;
     background-color: white;
 }
+
+#black , #color , #reset {
+    height: 3rem;
+    width: 6rem;
+    border-radius: 5px;
+   
+}
+
+#controls{
+    display: flex;
+    height: 4rem;
+    width: 100vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+footer{
+font-size: 2em;
+    font-family:'Courier New', Courier, monospace;
+    color: rgb(154, 187, 255);
+    font-weight: 500;
+    text-align: center;
+}
+

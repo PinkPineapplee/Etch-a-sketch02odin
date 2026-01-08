@@ -3,8 +3,8 @@ let grid;
 
 
 
-
-     
+//function to create Grid
+function createGrid(){    
 const numGrid = Number(prompt("choose a number from 1-100 to create a new grid!"));
 
 let squared = numGrid ** 2;
@@ -27,7 +27,7 @@ let squared = numGrid ** 2;
        console.log("Error:" + error)
       
      }
-
+}createGrid()
 
 // function to create random hex number
 function generateRandomHex(){
@@ -55,3 +55,15 @@ function generateRandomHex(){
     return randomColor;        
     }
 console.log(generateRandomHex())
+
+function draw(){
+
+}
+
+function toChangeColor(){
+
+}
+
+function reset(){
+  
+}
