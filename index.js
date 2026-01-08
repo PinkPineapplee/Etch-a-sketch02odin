@@ -3,12 +3,16 @@ const container = document.querySelector(".container");
 // function to create grid
 function createGrid(){
 let grid;
+     
 const numGrid = Number(prompt("choose a number from 1-100 to create a new grid!"));
+console
     let squared = numGrid ** 2;
      for (i = 0; i < squared; i++){
          grid = document.createElement("div");
-         grid.className= "box"
+         grid.classList("box");
          container.appendChild(grid);
+        
+         console.log("hay!, I am alive!");
      }
 
      try{
