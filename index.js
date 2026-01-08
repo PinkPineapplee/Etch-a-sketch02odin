@@ -66,11 +66,15 @@ btns.forEach((button) => {
     console.log(button.id);
 
      if (button.id === "black"){
-      grid.addEventListener("mouseover",(e)=>{ e.target.id.style.background = "black";})
+      container.addEventListener("mouseover",(e)=>{ e.target.style.background = "black";})
      } else if (button.id === "color"){
-      grid.addEventListener("mouseover",(e)=>{ e.target.id.style.background = generateRandomHex();})
+      container.addEventListener("mouseover",(e)=>{ e.target.style.background = generateRandomHex();})
      }
-     else if (button.id === "reset"){
+     else if (button.id === "eraser"){
+      container.addEventListener("mouseover",(e)=>{ e.target.style.background = "white";})
+      grid.style.background = "white";
+     } else if (button.id === "reset"){
+      container.addEventListener("mouseover",(e)=>{ e.target.style.background = "white";})
       grid.style.background = "white";
      }
   });
