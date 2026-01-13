@@ -13,7 +13,7 @@ let squared = numGrid ** 2;
      for (i = 0; i < squared; i++){
          grid = document.createElement("div");
          grid.className="box";
-         grid.id = `div${1};` 
+         grid.id = `div${i};` 
          container.appendChild(grid);
         
         
@@ -61,12 +61,13 @@ console.log(generateRandomHex())
 function draw(){
 
 btns.forEach((button) => {
-  // and for each one we add a 'click' listener
+ 
   button.addEventListener("click", () => {
     console.log(button.id);
-     grid.addEventListener("mouseover",()=>{ handleColorChange(e)})
+     grid.addEventListener("mouseover",(e)=>{ handleColorChange(e)})
      
      function handleColorChange(event){
+      console.log(event);
         if(button.id === "black"){
          event.target.style.backgroundColor = "black";
         }else if (button.id === "color"){
