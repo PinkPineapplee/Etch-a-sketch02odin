@@ -14,9 +14,7 @@ let squared = numGrid ** 2;
          grid = document.createElement("div");
          grid.className="box";
          grid.id = `div${i};` 
-         container.appendChild(grid);
-        
-        
+         container.appendChild(grid);   
      }
 
      try{
@@ -59,23 +57,27 @@ console.log(generateRandomHex())
 
 
 function draw(){
-
+ 
 btns.forEach((button) => {
  
   button.addEventListener("click", () => {
     console.log(button.id);
      grid.addEventListener("mouseover",(e)=>{ handleColorChange(e)})
-     
+    
      function handleColorChange(event){
-      console.log(event);
+          event = e.target.id
         if(button.id === "black"){
-         event.target.style.backgroundColor = "black";
+          event.style.backgroundColor = "black";
+          console.log("I am painting black")
         }else if (button.id === "color"){
-          event.target.style.backgroundColor = generateRandomHex();
+          event.style.backgroundColor = generateRandomHex();
+          console.log("I am painting colour")
         }else if(button.id === "eraser"){
-          event.target.style.backgroundColor = "white";
+          event.style.backgroundColor = "white";
+          console.log("I am erasing")
         }else if (button.id === "reset"){
-          grid.style.backgroundColor = "white";
+          event.style.backgroundColor = "white";
+          console.log("I am reset button")
         }
      }
   });
