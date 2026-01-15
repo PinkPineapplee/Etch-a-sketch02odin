@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 const btns = document.querySelectorAll("button");
+const box = document.querySelector("div.box")
 let grid;
 
 
@@ -26,6 +27,7 @@ let squared = numGrid ** 2;
        console.log("Error:" + error)
       
      }
+     return grid
 }createGrid()
 
 // function to create random hex number
@@ -61,23 +63,23 @@ function draw(){
 btns.forEach((button) => {
  
   button.addEventListener("click", () => {
-    console.log(button.id);
+   
      grid.addEventListener("mouseover",(e)=>{ handleColorChange(e)})
-    
+     console.log(button.id);
      function handleColorChange(event){
-          event = e.target.id
+          event = e.target
         if(button.id === "black"){
-          event.style.backgroundColor = "black";
-          console.log("I am painting black")
+          event.style.background = "black";
+          console.log("I am painting black.")
         }else if (button.id === "color"){
-          event.style.backgroundColor = generateRandomHex();
-          console.log("I am painting colour")
+          event.style.background = generateRandomHex();
+          console.log("I am painting colour.")
         }else if(button.id === "eraser"){
-          event.style.backgroundColor = "white";
-          console.log("I am erasing")
+          event.style.background = "white";
+          console.log("I am erasing.")
         }else if (button.id === "reset"){
-          event.style.backgroundColor = "white";
-          console.log("I am reset button")
+          event.style.background = "white";
+          console.log("I am reset button.")
         }
      }
   });
