@@ -64,25 +64,27 @@ btns.forEach((button) => {
  
   button.addEventListener("click", () => {
    
-     grid.addEventListener("mouseover",(e)=>{ handleColorChange(e)})
+     box.addEventListener("mouseover", handleColorChange)
      console.log(button.id);
-     function handleColorChange(event){
-          event = e.target
-        if(button.id === "black"){
-          event.style.background = "black";
-          console.log("I am painting black.")
-        }else if (button.id === "color"){
-          event.style.background = generateRandomHex();
-          console.log("I am painting colour.")
-        }else if(button.id === "eraser"){
-          event.style.background = "white";
-          console.log("I am erasing.")
-        }else if (button.id === "reset"){
-          event.style.background = "white";
-          console.log("I am reset button.")
-        }
-     }
+
+    
   });
 });
 }draw()
 
+ function handleColorChange(e){
+          
+        if(button.id === "black"){
+          e.target.style.backgroundColor = "black";
+          console.log("I am painting black.")
+        }else if (button.id === "color"){
+          e.target.style.backgroundColor = generateRandomHex;
+          console.log("I am painting colour.")
+        }else if(button.id === "eraser"){
+          e.target.style.backgroundColor = "white";
+          console.log("I am erasing.")
+        }else if (button.id === "reset"){
+          e.target.style.backgroundColor = "white";
+          console.log("I am reset button.")
+        }
+     }
