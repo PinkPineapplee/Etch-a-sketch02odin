@@ -1,6 +1,7 @@
 const container = document.querySelector(".container");
 const btns = document.querySelectorAll("button");
-const box = document.querySelector(".box")
+const box = document.querySelectorAll(".box");
+const resetBtn = document.querySelector("#reset");
 let grid;
 
 
@@ -16,6 +17,7 @@ let squared = numGrid ** 2;
          grid.className="box";
          grid.id = `div${i};` 
          container.appendChild(grid);   
+         reset(grid);
      }
 
      try{
@@ -40,7 +42,7 @@ function generateRandomHex(){
         
           randomNum = Math.floor(Math.random() * num.length);
           numberValue = num[randomNum];
-          console.log(numberValue);
+         
          return numberValue;
        
         }
@@ -66,6 +68,7 @@ btns.forEach((button) => {
    let clicked = e.target;
 
 function handleColorChange(click){
+
           let button = click;
         if(button.id === "black"){
            console.log(button.id);
@@ -88,12 +91,6 @@ function handleColorChange(click){
              e.target.style.backgroundColor = "white";
            })
          return;
-        }else if (button.id === "reset"){
-          
-             box.style.backgroundColor = "white";
-           
-         return;
-          
         }
      }
 
@@ -103,4 +100,10 @@ function handleColorChange(click){
 });
 }draw()
 
- 
+// reset all grid div
+ function reset(div){
+
+  resetBtn.addEventListener("click", () => {
+    div.style.backgroundColor = "white";
+  })
+}
