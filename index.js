@@ -1,6 +1,6 @@
 const container = document.querySelector(".container");
 const btns = document.querySelectorAll("button");
-const box = document.querySelector("div.box")
+const box = document.querySelector(".box")
 let grid;
 
 
@@ -55,36 +55,52 @@ function generateRandomHex(){
     console.log(randomColor)
     return randomColor;        
     }
-console.log(generateRandomHex())
+
 
 
 function draw(){
  
 btns.forEach((button) => {
  
-  button.addEventListener("click", () => {
-   
-     box.addEventListener("mouseover", handleColorChange)
-     console.log(button.id);
+  button.addEventListener("click", (e) => {
+   let clicked = e.target;
 
-    
+function handleColorChange(click){
+          let button = click;
+        if(button.id === "black"){
+           console.log(button.id);
+           container.addEventListener("mouseover", (e)=>{
+             e.target.style.backgroundColor = "black";
+            
+           })
+           return;
+         
+        }else if (button.id=== "color"){
+           console.log(button.id);
+           container.addEventListener("mouseover", (e)=>{
+             e.target.style.backgroundColor = generateRandomHex();
+           })
+         return;
+          
+        }else if(button.id === "eraser"){
+           console.log(button.id);
+           container.addEventListener("mouseover", (e)=>{
+             e.target.style.backgroundColor = "white";
+           })
+         return;
+        }else if (button.id === "reset"){
+          
+             box.style.backgroundColor = "white";
+           
+         return;
+          
+        }
+     }
+
+     
+     handleColorChange(clicked)
   });
 });
 }draw()
 
- function handleColorChange(e){
-          
-        if(button.id === "black"){
-          e.target.style.backgroundColor = "black";
-          console.log("I am painting black.")
-        }else if (button.id === "color"){
-          e.target.style.backgroundColor = generateRandomHex;
-          console.log("I am painting colour.")
-        }else if(button.id === "eraser"){
-          e.target.style.backgroundColor = "white";
-          console.log("I am erasing.")
-        }else if (button.id === "reset"){
-          e.target.style.backgroundColor = "white";
-          console.log("I am reset button.")
-        }
-     }
+ 
