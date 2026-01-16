@@ -91,6 +91,8 @@ function handleColorChange(click){
              e.target.style.backgroundColor = "white";
            })
          return;
+        }else{
+          return;
         }
      }
 
