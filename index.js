@@ -107,5 +107,7 @@ function handleColorChange(click){
 
   resetBtn.addEventListener("click", () => {
     div.style.backgroundColor = "white";
+    // remove eventlistener so event draw stops after reset.
+    container.removeEventListener("mouseover", draw, false)
   })
 }
