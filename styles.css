@@ -21,7 +21,7 @@ h1{
     box-sizing: border-box; 
 }
 .box{
-    flex: 1 0 clamp(10px,5px,3px);           
+    flex: 1 0 clamp(12px,10px,6px);           
     aspect-ratio: 1 / 1;
     background-color: white;
     

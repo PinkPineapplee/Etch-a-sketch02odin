@@ -85,7 +85,7 @@ function handleColorChange(click){
            })
          return;
           
-        }else if(button.id === "eraser"){
+        }else if(button.id === "eraser"&& !resetBtn){
            console.log(button.id);
            container.addEventListener("mouseover", (e)=>{
              e.target.style.backgroundColor = "white";
